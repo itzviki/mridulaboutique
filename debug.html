@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debug - Mridula Boutique</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        .debug-info {
+            background: #f0f0f0;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 5px;
+        }
+        .admin-toggle {
+            background: #2C8C8C;
+            color: white;
+            border: none;
+            padding: 1rem 1.5rem;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: 600;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+        }
+        .admin-panel {
+            position: fixed;
+            top: 0;
+            right: -400px;
+            width: 400px;
+            height: 100vh;
+            background: white;
+            box-shadow: -5px 0 20px rgba(0, 0, 0, 0.3);
+            transition: right 0.3s ease;
+            padding: 20px;
+        }
+        .admin-panel.active {
+            right: 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Debug Page - Testing Edit Functionality</h1>
+    
+    <div class="debug-info">
+        <h3>Debug Information:</h3>
+        <div id="debugInfo">Loading...</div>
+    </div>
+
+    <button id="adminToggle" class="admin-toggle">Edit Content</button>
+    
+    <div id="adminPanel" class="admin-panel">
+        <h3>Admin Panel</h3>
+        <p>If you can see this panel when clicking the button, JavaScript is working!</p>
+        <button id="closeAdminPanel">Close</button>
+    </div>
+
+    <script>
+        // Debug information
+        document.addEventListener('DOMContentLoaded', function() {
+            const debugDiv = document.getElementById('debugInfo');
+            debugDiv.innerHTML = `
+                <p>✅ DOM Loaded successfully</p>
+                <p>✅ Script running</p>
+                <p>✅ Admin Toggle button found: ${document.getElementById('adminToggle') ? 'Yes' : 'No'}</p>
+                <p>✅ Admin Panel found: ${document.getElementById('adminPanel') ? 'Yes' : 'No'}</p>
+            `;
+
+            // Test admin toggle functionality
+            const adminToggle = document.getElementById('adminToggle');
+            const adminPanel = document.getElementById('adminPanel');
+            const closeAdminPanel = document.getElementById('closeAdminPanel');
+
+            if (adminToggle) {
+                adminToggle.addEventListener('click', function() {
+                    console.log('Edit button clicked!');
+                    debugDiv.innerHTML += '<p>✅ Edit button clicked!</p>';
+                    adminPanel.classList.add('active');
+                });
+            }
+
+            if (closeAdminPanel) {
+                closeAdminPanel.addEventListener('click', function() {
+                    adminPanel.classList.remove('active');
+                });
+            }
+        });
+    </script>
+</body>
+</html>

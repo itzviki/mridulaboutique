@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mridula Boutique - Colorful & Playful</title>
+    <link rel="stylesheet" href="styles-playful.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Colorful Navigation -->
+    <nav class="nav">
+        <div class="nav-brand">
+            <span class="brand-text editable-text" data-field="logoText">Mridula Boutique</span>
+            <button class="edit-btn" data-target="logoText" title="Edit brand text">✏️</button>
+            <div class="rainbow-dot"></div>
+        </div>
+        <div class="nav-links">
+            <a href="#gallery" class="nav-link">Gallery</a>
+            <a href="#contact" class="nav-link">Contact</a>
+            <button class="edit-btn" data-target="navLinks" title="Edit navigation">✏️</button>
+        </div>
+    </nav>
+
+    <!-- Playful Hero with Big Image -->
+    <section class="hero" data-field="heroImage">
+        <button class="edit-btn image-edit-btn" data-target="heroImage" title="Edit hero background">🖼️</button>
+        <div class="hero-content">
+            <div class="hero-image-wrapper">
+                <img src="file:///D:/WebWorld/Photo/20180622_102909.jpg" alt="Mridula Boutique" class="hero-main-image">
+            </div>
+            <div class="hero-text-content">
+                <h1 class="hero-title editable-text" data-field="heroTitle">
+                    <span class="title-rainbow">Bespoke Magic</span>
+                    <button class="edit-btn" data-target="heroTitle" title="Edit hero title">✏️</button>
+                </h1>
+                <p class="hero-subtitle editable-text" data-field="heroSubtitle">
+                    Where Dreams Become Reality ✨
+                    <button class="edit-btn" data-target="heroSubtitle" title="Edit hero subtitle">✏️</button>
+                </p>
+                <button class="cta-button cta-rainbow editable-text" data-field="heroCTA">
+                    Explore Our Magic
+                    <button class="edit-btn" data-target="heroCTA" title="Edit CTA button">✏️</button>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Floating Elements -->
+        <div class="floating-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+            <div class="shape shape-4"></div>
+        </div>
+    </section>
+
+    <!-- Colorful Gallery Section -->
+    <section id="gallery" class="gallery">
+        <div class="section-header">
+            <h2 class="section-title editable-text" data-field="galleryTitle">
+                <span class="title-gradient">Our Colorful Collection</span>
+                <button class="edit-btn" data-target="galleryTitle" title="Edit gallery title">✏️</button>
+            </h2>
+        </div>
+        <div class="gallery-grid" id="galleryGrid">
+            <!-- Gallery items will be populated by JavaScript -->
+        </div>
+    </section>
+
+    <!-- Playful Contact Section -->
+    <section id="contact" class="contact">
+        <div class="contact-container">
+            <div class="contact-info">
+                <h3 class="editable-text" data-field="contactTitle">
+                    <span class="title-bounce">Let's Create Magic! 🎨</span>
+                    <button class="edit-btn" data-target="contactTitle" title="Edit contact title">✏️</button>
+                </h3>
+                <p class="contact-description editable-text" data-field="contactDesc">
+                    Your dream garment is just a click away! 🌟
+                    <button class="edit-btn" data-target="contactDesc" title="Edit contact description">✏️</button>
+                </p>
+            </div>
+            <div class="contact-form">
+                <form id="contactForm">
+                    <div class="form-group">
+                        <input type="text" id="name" placeholder="Your Magical Name ✨" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" id="phone" placeholder="Your Phone Number 📱" required>
+                    </div>
+                    <div class="cart-section">
+                        <h4 class="editable-text" data-field="cartTitle">
+                            <span class="cart-rainbow">Your Magical Cart</span>
+                            <button class="edit-btn" data-target="cartTitle" title="Edit cart title">✏️</button>
+                        </h4>
+                        <div class="cart-items" id="cartItems">
+                            <p class="empty-cart">Your cart is empty</p>
+                        </div>
+                        <div class="cart-total">
+                            <span>Total: <span id="cartCount">0</span> items 🎁</span>
+                        </div>
+                    </div>
+                    <button type="submit" class="submit-btn rainbow-button">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.149-.67.149-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414-.074-.123-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005C6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+                        </svg>
+                        Send Magic via WhatsApp
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fun Edit Toggle -->
+    <button id="adminToggle" class="admin-toggle">
+        <span class="toggle-icon">🎨</span>
+        Edit Magic
+    </button>
+
+    <!-- Admin Panel -->
+    <div id="adminPanel" class="admin-panel">
+        <div class="admin-header">
+            <h3>🎨 Edit Magic Panel</h3>
+            <button id="closeAdminPanel" class="close-btn">&times;</button>
+        </div>
+        <div class="admin-content">
+            <div class="admin-section">
+                <h4>🖼️ Hero Image</h4>
+                <input type="text" id="heroImageInput" placeholder="Enter magical image URL">
+            </div>
+            <div class="admin-section">
+                <h4>✨ Brand Text</h4>
+                <input type="text" id="logoTextInput" placeholder="Enter brand name">
+            </div>
+            <div class="admin-section">
+                <h4>🌟 Hero Title</h4>
+                <input type="text" id="heroTitleInput" placeholder="Enter magical title">
+            </div>
+            <div class="admin-section">
+                <h4>💫 Hero Subtitle</h4>
+                <input type="text" id="heroSubtitleInput" placeholder="Enter magical subtitle">
+            </div>
+            <div class="admin-section">
+                <h4>🎨 Gallery Title</h4>
+                <input type="text" id="galleryTitleInput" placeholder="Enter gallery title">
+            </div>
+            <div class="admin-section">
+                <h4>🌈 Contact Title</h4>
+                <input type="text" id="contactTitleInput" placeholder="Enter contact title">
+            </div>
+        </div>
+        <div class="admin-footer">
+            <button id="saveAllChanges" class="save-btn">💾 Save All Magic</button>
+        </div>
+    </div>
+
+    <script src="script-playful.js"></script>
+</body>
+</html>
